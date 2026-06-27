@@ -4,17 +4,13 @@ const postSchema = new mongoose.Schema(
   {
     user: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "User"
-    },
-
-    caption: {
-      type: String,
+      ref: "User",
       required: true
     },
 
-    image: {
+    content: {
       type: String,
-      default: ""
+      required: true
     },
 
     likes: [
